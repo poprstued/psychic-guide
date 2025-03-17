@@ -3,43 +3,41 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>wynajem pokoju</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel="stylesheet" type="text/css" href="Untitled-1.css">
+<!--D.Marcisz-->
 </head>
 <body>
+    <center><h1>Funkcje - zadania</h1></center>
+    <center><h2> wynajem pokoju</h2></center>
     <script>
-        const dni (prompt("na ile dni chcesz wynajac pokoj"))
+        let dni = parseInt(prompt('Na ile dni chcesz wynająć pokój?'));
         
-        while (isNaN(dni))
-            document.write ('na ile dni chcesz wynajac pokoj');
-
-
-        function rentCost(dni){
-            let koszt_dzien;
-            if (dni===1){
-                koszt_dzien = 200;
-            }else if (dni >=2 , dni <=3){
-                koszt_dzien = 180;
-            }else if (dni >=4, dni <=7){
-                koszt_dzien = 160;
-            }else{
-                koszt_dzien = 150;
-            }
+        while (isNaN(dni)) {
+            dni = parseInt(prompt('Na ile dni chcesz wynająć pokój?'));
         }
 
+        function rentCost(dni) {
+            let koszt_dzien;
+            if (dni === 1) {
+                koszt_dzien = 200;
+            } else if (dni >= 2 && dni <= 3) {
+                koszt_dzien = 180;
+            } else if (dni >= 4 && dni <= 7) {
+                koszt_dzien = 160;
+            } else {
+                koszt_dzien = 150;
+            }
+            return koszt_dzien;
+        }
+
+        let koszt_dzien = rentCost(dni);
         let koszt_caly = dni * koszt_dzien;
 
-        document.write("koszt:" koszt_caly)
-    
-        
- 
-
-
-
+        document.write(`cena za wynajem pokoju na ${dni} dni wynosi ${koszt_caly} zł, w tym rabat:`); 
 
     </script>
-    
+    </div>
 </body>
 </html>
