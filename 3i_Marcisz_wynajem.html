@@ -10,7 +10,12 @@
 </head>
 <body>
     <script>
-        const dni(prompt("na iloe dni chcesz wynajac pokuj"))
+        const dni (prompt("na ile dni chcesz wynajac pokoj"))
+        
+        while (isNaN(dni))
+            document.write ('na ile dni chcesz wynajac pokoj');
+
+
         function rentCost(dni){
             let koszt_dzien;
             if (dni===1){
